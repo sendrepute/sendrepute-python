@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sendrepute"
+version = "0.1.0"
+description = "Server-only Python client for SendRepute email classification"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "SendRepute" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Communications :: Email",
+]
+
+[project.optional-dependencies]
+django = ["Django>=4.2"]
+
+[project.urls]
+Homepage = "https://www.sendrepute.com"
+Repository = "https://github.com/sendrepute/sendrepute-python"
+Issues = "https://github.com/sendrepute/sendrepute-python/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sendrepute", "sendrepute.*"]
